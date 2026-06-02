@@ -6,6 +6,7 @@
 // @author       Klasputnikov
 // @match        https://www.youtube.com/*
 // @match        https://m.youtube.com/*
+// @match        https://youtu.be/*
 // @icon         https://www.youtube.com/favicon.ico
 // @grant        GM_openInTab
 // @run-at       document-idle
