@@ -4,20 +4,27 @@
 // @version      1.0
 // @description  Redirect youtube to no-cookies on mobile
 // @author       Klasputnikov
-// @match        https://www.youtube.com/watch*
-// @match        https://m.youtube.com/watch*
-// @match 		 https://youtu.be/watch*
+// @match        *://*.youtube.com/*
 // @grant        none
 // ==/UserScript==
 
-(function () {
+(function() {
     'use strict';
 
-    const url = window.location.href;
+    document.addEventListener('click', function(event) {
+        const anchor = event.target.closest('a');
+        if (!anchor) return;
 
-    const newUrl = url.replace(/youtube\.com/, 'yout-ube.com');
+        const href = anchor.href;
 
-    if (newUrl !== url) {
-        window.location.replace(newUrl);
-    }
+        if (href && (href.includes('youtube.com/watch') || href.includes('youtube.com/shorts'))) {
+            
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            const newUrl = href.replace(/(m\.)?youtube\.com/, 'yout-ube.com');
+
+            window.open(newUrl, '_blank');
+        }
+    }, true);
 })();
