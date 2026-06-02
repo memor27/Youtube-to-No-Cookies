@@ -6,6 +6,7 @@
 // @author       Klasputnikov
 // @match        *://*.youtube.com/*
 // @grant        none
+// @license      GNU GPLv3 
 // ==/UserScript==
 
 (function() {
