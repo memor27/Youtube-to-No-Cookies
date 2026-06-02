@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube to No-Cookie Redirect
 // @namespace    http://tampermonkey.net/
-// @version      0.0.2
+// @version      0.0.3
 // @description  Open youtube videos in newtab and redirect them to No-Cookies in order to not have ADS nor playback problems
 // @author       Klasputnikov
 // @match        https://www.youtube.com/*
@@ -9,7 +9,8 @@
 // @match        https://youtu.be/*
 // @icon         https://www.youtube.com/favicon.ico
 // @grant        GM_openInTab
-// @run-at       document-idle
+// @run-at       document-start
+// @license      GNU GPLv3 
 // ==/UserScript==
 (function () {
     'use strict';
@@ -34,7 +35,8 @@
     }
 
     function openVideo(href) {
-        const url = href.startsWith('http') ? href : YT_ORIGIN + href;
+        let url = href.startsWith('http') ? href : YT_ORIGIN + href;
+        url = url.replace('youtube.com', 'yout-ube.com');
         GM_openInTab(url, { active: true, insert: true });
     }
 
