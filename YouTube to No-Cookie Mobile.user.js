@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube to No-Cookie Mobile
 // @namespace    nocookiesforyout
-// @version      1.0
+// @version      0.2
 // @description  Redirect youtube to no-cookies on mobile
 // @author       Klasputnikov
 // @match        *://*.youtube.com/*
