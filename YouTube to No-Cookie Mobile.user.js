@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         YouTube to No-Cookie Mobile
-// @namespace    http://tampermonkey.net/
+// @namespace    nocookiesforyout
 // @version      1.0
 // @description  Redirect youtube to no-cookies on mobile
 // @author       Klasputnikov
