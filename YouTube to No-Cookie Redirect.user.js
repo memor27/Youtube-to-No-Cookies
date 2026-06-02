@@ -12,6 +12,7 @@
 // @run-at       document-start
 // @license      GNU GPLv3 
 // ==/UserScript==
+
 (function () {
     'use strict';
 
