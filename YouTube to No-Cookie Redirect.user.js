@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube to No-Cookie Redirect
 // @namespace    http://tampermonkey.net/
-// @version      0.0.1
+// @version      0.0.2
 // @description  Open youtube videos in newtab and redirect them to No-Cookies in order to not have ADS nor playback problems
 // @author       Klasputnikov
 // @match        https://www.youtube.com/*
